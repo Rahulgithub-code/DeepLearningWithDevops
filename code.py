@@ -7,7 +7,7 @@ from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
 import os
 
-def model(epoch,n):
+def model_train(epoch,n):
     batch_size = 32
     num_classes = 10
     epochs = epoch
@@ -70,7 +70,7 @@ def model(epoch,n):
 
 epoch=1
 layer=1
-accuracy_train_model=model(epoch,layer)
+accuracy_train_model=model_train(epoch,layer)
 f = open("accuracy.txt","w+")
 f.write(str(accuracy_train_model))
 f.close()
