@@ -10,11 +10,8 @@ RUN pip3 install opencv-python
 RUN pip3 install numpy
 
 RUN pip3 install pandas
-ENTRYPOINT["python36"]
+WORKDIR /root/task3mlops/
+COPY main_cnn.py /root/task3mlops/
 
-
-WORKDIR /home/ashutosh/Documents/mlops
-COPY mnsit_keras_library_cnn.py /home/ashutosh/Documents/mlops
-
-CMD python36 mnsit_keras_library_cnn.py
+CMD ["python36", "main_cnn.py"]
 
