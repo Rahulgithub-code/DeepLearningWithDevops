@@ -199,7 +199,7 @@ y_test_cat
 # In[61]:
 
 
-model.save('mnsitmodel.h1')
+model.save('main_model.h1')
 
 
 
