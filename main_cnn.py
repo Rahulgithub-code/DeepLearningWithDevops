@@ -213,7 +213,7 @@ a=h.history['accuracy'][0]
 print("accuarcy is=",a)
 
 
-with open('/home/ashutosh/Documents/MLworkshop/MLproject/acuuarcy.txt ', 'w+') as output_file:
+with open('/root/task3mlops/acuuarcy.txt ', 'w+') as output_file:
     output_file.write(str(a))
 
 
