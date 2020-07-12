@@ -204,17 +204,13 @@ model.save('main_model.h1')
 
 
 # In[ ]:
-accuarcy=(h.history['accuracy'])
-
-
-a=h.history['accuracy'][0]
-
-
-print("accuarcy is=",a)
-
-
-with open('/root/task3mlops/acuuarcy.txt ', 'w+') as output_file:
-    output_file.write(str(a))
+text = h.history
+accuracy = text['accuracy'][1] * 100
+accuracy = int(accuracy)
+f= open("accuracy.txt","w+")
+f.write(str(accuracy))
+f.close()
+print("Accuracy for the model is : " , accuracy ,"%")
 
 
 
