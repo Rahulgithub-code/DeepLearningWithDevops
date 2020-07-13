@@ -204,14 +204,13 @@ model.save('main_model.h1')
 
 
 # In[ ]:
-text = h.history
-accuracy = text['accuracy'][1] * 100
-accuracy = int(accuracy)
-f= open("accuracy.txt","w+")
-f.write(str(accuracy))
+f.write(str(h[-1]))
 f.close()
-print("Accuracy for the model is : " , accuracy ,"%")
-
+os.system("mv /accuracy.txt /MYCODE")
+display_matter = open('accuracy_display.html','w+')
+display_matter.write('<pre>\n---------------------------------------------\n')
+display_matter.write('\nAccuracy achieved : ' + str(h)+'\n</pre>')
+display_matter.close()
 
 
 
