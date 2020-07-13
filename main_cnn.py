@@ -204,14 +204,17 @@ model.save('main_model.h1')
 
 
 # In[ ]:
-f = open("accuracy.txt","w+")
-f.write(str(model[-1]))
-f.close()
-os.system("mv /accuracy.txt /root/task3mlops/")
-display_matter = open('accuracy_display.html','w+')
-display_matter.write('<pre>\n---------------------------------------------\n')
-display_matter.write('\nAccuracy achieved : ' + str(model)+'\n</pre>')
-display_matter.close()
+accuarcy=(h.history['accuracy'])
+
+
+a=h.history['accuracy'][0]
+
+
+print("accuarcy is=",a)
+
+
+with open('/root/task3mlops/acuuarcy.txt ', 'w+') as output_file:
+    output_file.write(str(a))
 
 
 
