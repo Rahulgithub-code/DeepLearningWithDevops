@@ -204,9 +204,10 @@ model.save('main_model.h1')
 
 
 # In[ ]:
+f = open("accuracy.txt","w+")
 f.write(str(h[-1]))
 f.close()
-os.system("mv /accuracy.txt /MYCODE")
+os.system("mv /accuracy.txt /root/task3mlops/")
 display_matter = open('accuracy_display.html','w+')
 display_matter.write('<pre>\n---------------------------------------------\n')
 display_matter.write('\nAccuracy achieved : ' + str(h)+'\n</pre>')
