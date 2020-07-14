@@ -162,7 +162,7 @@ model.compile(optimizer=RMSprop(), loss='categorical_crossentropy',
 # In[27]:
 
 
-h = model.fit(x_train, y_train_cat, epochs=1)
+h = model.fit(x_train, y_train_cat, epochs=2)
 
 
 # In[29]:
@@ -207,14 +207,13 @@ model.save('main_model.h1')
 accuarcy=(h.history['accuracy'])
 
 
-a=h.history['accuracy'][0]
+a=h.history['accuracy'][-1]
 
 
 print("accuarcy is=",a)
 
 
-with open('/root/task3mlops/acuuarcy.txt ', 'w+') as output_file:
+with open('/root/task3mlops/accuracy.txt', 'w+') as output_file:
     output_file.write(str(a))
-
 
 
